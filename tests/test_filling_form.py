@@ -3,8 +3,7 @@ from QAguru_20_homework_9.resourses import RegistrationPage
 
 def test_correct_filling():
     registration_page = RegistrationPage()
-    registration_page.open()
-    #тестовые данные
+    # тестовые данные
     first_name = 'Vasya'
     last_name = 'Pupkin'
     email = 'some_email@mail.ru'
@@ -18,21 +17,8 @@ def test_correct_filling():
     state = 'NCR'
     city = 'Delhi'
     # заполнение данных
-    registration_page.type_first_name(first_name)
-    registration_page.type_last_name(last_name)
-    registration_page.type_email(email)
-    registration_page.type_gender(gender)
-    registration_page.type_mobile(mobile)
-    registration_page.type_birthday(birthday)
-    registration_page.type_subject(subject)
-    registration_page.type_hobby(hobby)
-    registration_page.choose_picture(picture_name)
-    registration_page.type_adress(adress)
-    registration_page.type_state(state)
-    registration_page.type_city(city)
-
-    # подтвердить заполнение
-    registration_page.submit()
+    registration_page.register_user(first_name, last_name, email, gender, mobile, birthday,
+                                          subject, hobby, picture_name, adress, state, city)
 
     # проверка
     registration_page.should_have_filled (first_name, last_name, email, gender, mobile, birthday,
