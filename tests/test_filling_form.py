@@ -1,4 +1,4 @@
-from QAguru_20_homework_9.resourses import RegistrationPage
+from QAguru_20_homework_9.page import RegistrationPage
 
 
 def test_correct_filling():
@@ -21,15 +21,15 @@ def test_correct_filling():
     registration_page.type_first_name(first_name)
     registration_page.type_last_name(last_name)
     registration_page.type_email(email)
-    registration_page.type_gender(gender)
+    registration_page.choose_gender(gender)
     registration_page.type_mobile(mobile)
     registration_page.type_birthday(birthday)
-    registration_page.type_subject(subject)
-    registration_page.type_hobby(hobby)
+    registration_page.input_subject(subject)
+    registration_page.choose_hobby(hobby)
     registration_page.choose_picture(picture_name)
     registration_page.type_adress(adress)
-    registration_page.type_state(state)
-    registration_page.type_city(city)
+    registration_page.choose_state(state)
+    registration_page.choose_city(city)
 
     # подтвердить заполнение
     registration_page.submit()
