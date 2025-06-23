@@ -1,5 +1,7 @@
 from QAguru_20_homework_9.moodel import Gender, Hobby, State, User
 from QAguru_20_homework_9.page import RegistrationPage
+import allure
+
 
 
 def test_correct_filling():
